@@ -1,0 +1,90 @@
+:root {
+  --color-primary: #00a8ff;
+  --color-primary-dark: #0090d9;
+  --color-accent: #ffc107;
+  --color-shade: #777777;
+  --color-shade-light: #dddddd;
+  --color-white: #ffffff;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.wrapper-content {
+  display: grid;
+  grid-template-columns: 0.35fr 0.55fr;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-group > label {
+  color: var(--color-shade-light);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: -1;
+}
+
+:is(#base-input, #pixel-input, #em-input) {
+  color: var(--color-shade);
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 0.9rem;
+  outline: none;
+  overflow: hidden;
+  padding: 7px 45px 7px 1px;
+  width: 175px;
+  z-index: 1;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.27em;
+  outline: 1px solid;
+  padding: 0.8rem 4.5rem;
+  width: max-content;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.history > li {
+  height: 75px;
+  width: 100%;
+}
+
+.focus-label {
+  position: relative;
+  top: 15px;
+}
+
+.blur-label {
+  top: 35px;
+}
