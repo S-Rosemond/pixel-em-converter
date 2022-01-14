@@ -16,12 +16,13 @@ formGroupInputs.forEach((elements) => {
   //parentnode.children[0] option 1
 
   elements.addEventListener("focus", (e) => {
-    console.log(e, e.explicitOriginalTarget);
+    console.log(e, e.target.parentNode.children[0]);
+    e.target.parentNode.children[0].classList.remove("blur-label");
+    e.target.parentNode.children[0].classList.add("focus-label");
   });
 
-  elements.addEventListener("blur", () => {});
-
-  // option 2
-
-  e.explicitOriginalTarget.classList.add();
+  elements.addEventListener("blur", (e) => {
+    e.target.parentNode.children[0].classList.remove("focus-label");
+    e.target.parentNode.children[0].classList.add("blur-label");
+  });
 });

@@ -32,12 +32,14 @@ header {
   display: grid;
   gap: 10px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .form-group > label {
+  display: inline;
   color: var(--color-shade-light);
-  font-size: 0.9rem;
-  position: relative;
+  position: absolute;
+  transition: position 3s ease-in-out;
   z-index: -1;
 }
 
@@ -81,10 +83,15 @@ header {
 }
 
 .focus-label {
-  position: relative;
-  top: 15px;
+  font-size: 0.7rem;
+  top: -5px;
 }
 
 .blur-label {
-  top: 35px;
+  font-size: 0.9rem;
+  top: 10px;
+}
+
+.pyt-10 {
+  padding-top: 10px;
 }
