@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Pixel/Em converter</title>
 </head>
 <body>
 
-    <header>
+    <header class='brand-banner'>
          <h1>Pixel/Em Converter</h1>
     </header>
+
+    <section class='navigator-section'>
+        <nav class='nav'>
+            <ul>
+                <li>History</li>
+            </ul>
+        </nav>
+    </section>
 
     <section class='wrapper-content'>
 
@@ -35,7 +46,7 @@
                 </div>
 
                 <div class="form-group pyt-10">
-                     <button type='submit' class='btn btn-primary'>Convert</button>
+                     <button type='submit' class='btn btn-primary btn-font'>Convert</button>
                 </div>
     
                
@@ -50,6 +61,10 @@
         </aside>
 
     </section>
+
+    <footer>
+        <p class="error-output">Temp Error Message</p>
+    </footer>
 
     
 

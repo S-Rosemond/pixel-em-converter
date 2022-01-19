@@ -8,23 +8,45 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "Dongle", Roboto, serif, sans-serif;
+  font-size: 30px;
   padding: 0;
+  margin: 0;
 }
 
 header {
+  font-family: "PT Serif", serif;
   text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.brand-banner {
+  display: grid;
+  height: 200px;
+  align-content: space-evenly;
+}
+
+.navigator-section {
+  height: 50px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper-content {
   display: grid;
-  grid-template-columns: 0.35fr 0.55fr;
+  grid-template-columns: 1.5fr 2fr;
   justify-content: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
@@ -37,9 +59,8 @@ header {
 
 .form-group > label {
   display: inline;
-  color: var(--color-shade-light);
   position: absolute;
-  transition: position 3s ease-in-out;
+  transition: top 0.2s ease-out;
   z-index: -1;
 }
 
@@ -67,6 +88,10 @@ header {
   border-radius: 5px;
 }
 
+.btn-font {
+  font-family: "PT Serif", Roboto, serif;
+}
+
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -83,13 +108,21 @@ header {
 }
 
 .focus-label {
-  font-size: 0.7rem;
-  top: -5px;
+  color: var(--color-primary);
+  font-size: 0.7em;
+  top: -18px;
+  left: 1px;
 }
 
 .blur-label {
-  font-size: 0.9rem;
-  top: 10px;
+  color: var(--color-shade-light);
+  font-size: 1.5rem;
+  top: 0px;
+  left: 1px;
+}
+
+#history > li {
+  height: 75px;
 }
 
 .pyt-10 {
