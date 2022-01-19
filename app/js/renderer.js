@@ -9,10 +9,6 @@ const formGroupInputs = document.querySelectorAll(
 const errorOutput = document.getElementById("error-output");
 const clearButton = document.getElementById("clear-button");
 
-mainForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-});
-
 formGroupInputs.forEach((elements) => {
   elements.addEventListener("focus", (e) => {
     e.target.parentNode.children[0].classList.remove("blur-label");
@@ -46,16 +42,16 @@ function conversion(input, base, type) {
   return result;
 }
 
-pixelInput.addEventListener("focus", (e) => {
+pixelInput.addEventListener("focus", () => {
   emInput.value = "";
   errorOutput.innerText = "";
 });
-emInput.addEventListener("focus", (e) => {
+emInput.addEventListener("focus", () => {
   pixelInput.value = "";
   errorOutput.innerText = "";
 });
 
-clearButton.addEventListener("click", (e) => {
+clearButton.addEventListener("click", () => {
   history.innerHTML = "";
   mainForm.reset();
 });
@@ -84,12 +80,9 @@ mainForm.addEventListener("submit", (event) => {
   }
 
   history.innerHTML += `<li>${px}px = ${em}em</li>`;
-
-  // mainForm.reset();
 });
 
 // Dev only
 if (window.location.reload) {
-  baseInput.value = "";
   mainForm.reset();
 }

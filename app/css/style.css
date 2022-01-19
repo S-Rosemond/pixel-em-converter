@@ -9,7 +9,7 @@
 
 body {
   font-family: "Dongle", Roboto, serif, sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   padding: 0;
   margin: 0;
 }
@@ -33,7 +33,7 @@ aside {
 
 .brand-banner {
   display: grid;
-  height: 200px;
+  height: 12.5rem;
   align-content: space-evenly;
 }
 
@@ -52,15 +52,15 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .form-group {
   display: grid;
-  gap: 10px;
+  gap: 0.625rem;
   margin-bottom: 20px;
   position: relative;
-  left: 75px;
+  left: 4.6875rem;
 }
 
 .form-group > label {
@@ -80,7 +80,7 @@ aside {
   outline: none;
   overflow: hidden;
   padding: 7px 45px 7px 1px;
-  width: 175px;
+  width: 10.9375rem;
   z-index: 1;
 }
 
@@ -91,8 +91,8 @@ aside {
   outline: 1px solid;
   padding: 0.8rem 4.5rem;
   width: max-content;
-  border-radius: 5px;
-  min-width: 220px;
+  border-radius: 0.3125rem;
+  min-width: 13.75rem;
 }
 
 .btn-font {
@@ -110,22 +110,22 @@ aside {
 }
 
 .history > li {
-  height: 75px;
+  height: 4.6875rem;
   width: 100%;
 }
 
 .focus-label {
   color: var(--color-primary);
   font-size: 0.7em;
-  top: -18px;
-  left: 1px;
+  top: -1.125rem;
+  left: 0.0625rem;
 }
 
 .blur-label {
   color: var(--color-shade-light);
   font-size: 1.5rem;
   top: 0px;
-  left: 1px;
+  left: 0.0625rem;
 }
 
 .nav > li {
@@ -135,16 +135,16 @@ aside {
 #history {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  max-height: 310px;
+  max-height: 19.375rem;
   overflow-y: auto;
 }
 
 #history > li {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .pyt-10 {
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 
 #error-output {
