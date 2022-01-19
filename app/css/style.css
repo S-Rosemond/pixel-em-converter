@@ -30,9 +30,6 @@ li {
 }
 
 .navigator-section {
-  height: 50px;
-}
-.nav {
   display: flex;
   justify-content: center;
 }
@@ -121,14 +118,18 @@ li {
   left: 1px;
 }
 
+.nav > li {
+  border-bottom: 3px solid var(--color-primary-dark);
+}
+
 #history > li {
-  height: 75px;
+  height: 40px;
 }
 
 .pyt-10 {
   padding-top: 10px;
 }
 
-.error-output {
+#error-output {
   text-align: center;
 }

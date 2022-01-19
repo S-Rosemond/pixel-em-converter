@@ -2,7 +2,7 @@ const history = document.getElementById("history");
 const mainForm = document.getElementById("main-form");
 const pixelInput = document.getElementById("pixel-input");
 const emInput = document.getElementById("em-input");
-const BaseInput = document.getElementById("base-input");
+const baseInput = document.getElementById("base-input");
 const formGroupInputs = document.querySelectorAll(
   ".form-group > input[type='text']"
 );
@@ -47,30 +47,32 @@ function conversion(input, base, type) {
 
 pixelInput.addEventListener("focus", (e) => {
   emInput.value = "";
+  errorOutput.innerText = "";
 });
 emInput.addEventListener("focus", (e) => {
   pixelInput.value = "";
+  errorOutput.innerText = "";
 });
 
 mainForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(pixelInput.value, emInput.value, BaseInput.value);
+
   let em;
   let px;
   const type = pixelInput.value ? "em" : "px";
 
   switch (type) {
     case "em":
-      em = conversion(pixelInput.value, BaseInput.value, type);
+      em = conversion(pixelInput.value, baseInput.value, type);
       px = Number(pixelInput.value);
       break;
     case "px":
-      px = conversion(emInput.value, BaseInput.value, type);
+      px = conversion(emInput.value, baseInput.value, type);
       em = Number(emInput.value);
       break;
   }
 
-  if (typeof em === "string" || typeof pixel === "string") {
+  if (isNaN(em) || isNaN(px)) {
     errorOutput.innerText = "Please enter a valid number";
     return;
   }
@@ -79,3 +81,9 @@ mainForm.addEventListener("submit", (event) => {
 
   // mainForm.reset();
 });
+
+// Dev only
+if (window.location.reload) {
+  baseInput.value = "";
+  mainForm.reset();
+}
