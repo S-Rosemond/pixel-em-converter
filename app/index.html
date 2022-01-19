@@ -25,13 +25,19 @@
     <main class='wrapper-content'>
 
         <section class='container'>
-
+<!-- 
             <div class='form-group'>
                     <label class='blur-label' for='basefont-input'>Base Font Size</label>
                     <input type='text' id='base-input' class='form-control'  />
-            </div>
+            </div> -->
     
             <form id='main-form'>
+
+                
+            <div class='form-group'>
+                <label class='blur-label' for='basefont-input'>Base Font Size</label>
+                <input type='text' id='base-input' class='form-control'  />
+        </div>
     
                 <div class='form-group'>
                     <label class='blur-label' for='pixel-input'>Pixel</label>
@@ -46,6 +52,10 @@
                 <div class="form-group pyt-10">
                      <button type='submit' class='btn btn-primary btn-font'>Convert</button>
                 </div>
+
+                <div class="form-group pyt-10">
+                    <button id='clear-button' type='button' class='btn btn-primary btn-font'>clear</button>
+                </div>
     
                
             </form>
@@ -53,8 +63,7 @@
 
 
         <aside>
-            <ul id='history'>
-                <li>16px <span>1em</span></li>
+            <ul id='history'>    
             </ul>
         </aside>
 

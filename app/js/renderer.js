@@ -6,7 +6,8 @@ const baseInput = document.getElementById("base-input");
 const formGroupInputs = document.querySelectorAll(
   ".form-group > input[type='text']"
 );
-let errorOutput = document.getElementById("error-output");
+const errorOutput = document.getElementById("error-output");
+const clearButton = document.getElementById("clear-button");
 
 mainForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -52,6 +53,11 @@ pixelInput.addEventListener("focus", (e) => {
 emInput.addEventListener("focus", (e) => {
   pixelInput.value = "";
   errorOutput.innerText = "";
+});
+
+clearButton.addEventListener("click", (e) => {
+  history.innerHTML = "";
+  mainForm.reset();
 });
 
 mainForm.addEventListener("submit", (event) => {

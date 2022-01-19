@@ -23,6 +23,14 @@ li {
   list-style: none;
 }
 
+aside > ul {
+  margin: 0;
+}
+
+aside {
+  background-color: var(--color-shade-light);
+}
+
 .brand-banner {
   display: grid;
   height: 200px;
@@ -52,6 +60,7 @@ li {
   gap: 10px;
   margin-bottom: 20px;
   position: relative;
+  left: 75px;
 }
 
 .form-group > label {
@@ -83,6 +92,7 @@ li {
   padding: 0.8rem 4.5rem;
   width: max-content;
   border-radius: 5px;
+  min-width: 220px;
 }
 
 .btn-font {
@@ -120,6 +130,13 @@ li {
 
 .nav > li {
   border-bottom: 3px solid var(--color-primary-dark);
+}
+
+#history {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 310px;
+  overflow-y: auto;
 }
 
 #history > li {
