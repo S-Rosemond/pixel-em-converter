@@ -29,34 +29,53 @@ formGroupInputs.forEach((elements) => {
 function conversion(input, base, type) {
   let result;
 
-  if (isNaN(Number(input)) || input.length < 1) return;
+  if (isNaN(Number(input))) return;
+  if (input.length < 1) input = 0;
+  if (base.length < 1) base = 16;
 
   switch (type) {
     case "px":
-      result = Number(em * base);
+      result = Number(input * base);
       break;
     case "em":
-      result = Number(px / base);
+      result = Number(input / base);
       break;
   }
 
   return result;
 }
 
+pixelInput.addEventListener("focus", (e) => {
+  emInput.value = "";
+});
+emInput.addEventListener("focus", (e) => {
+  pixelInput.value = "";
+});
+
 mainForm.addEventListener("submit", (event) => {
   event.preventDefault();
+  console.log(pixelInput.value, emInput.value, BaseInput.value);
+  let em;
+  let px;
+  const type = pixelInput.value ? "em" : "px";
 
-  const [em, pixel] = [
-    conversion(pixelInput.value, BaseInput.value, "em"),
-    conversion(emInput.value, BaseInput.value, "px"),
-  ];
+  switch (type) {
+    case "em":
+      em = conversion(pixelInput.value, BaseInput.value, type);
+      px = Number(pixelInput.value);
+      break;
+    case "px":
+      px = conversion(emInput.value, BaseInput.value, type);
+      em = Number(emInput.value);
+      break;
+  }
 
   if (typeof em === "string" || typeof pixel === "string") {
     errorOutput.innerText = "Please enter a valid number";
     return;
   }
 
-  history.innerHTML += `<p>${pixel}px = ${em}em</p>`;
+  history.innerHTML += `<li>${px}px = ${em}em</li>`;
 
-  mainForm.reset();
+  // mainForm.reset();
 });
