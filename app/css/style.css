@@ -11,7 +11,8 @@ body {
   font-family: "Dongle", Roboto, serif, sans-serif;
   font-size: 1.875rem;
   padding: 0;
-  margin: 0;
+  margin: 0 1.1rem;
+  overflow: hidden;
 }
 
 header {
@@ -51,7 +52,6 @@ aside {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.25rem;
 }
 
@@ -60,7 +60,7 @@ aside {
   gap: 0.625rem;
   margin-bottom: 20px;
   position: relative;
-  left: 4.6875rem;
+  /* left: 4.6875rem; */
 }
 
 .form-group > label {
@@ -131,12 +131,19 @@ aside {
 .nav > li {
   border-bottom: 3px solid var(--color-primary-dark);
 }
-
+#main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #history {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-height: 19.375rem;
   overflow-y: auto;
+  padding-right: 0.625rem;
+  padding-left: 0.9375rem;
+  text-align: end;
 }
 
 #history > li {
